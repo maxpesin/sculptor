@@ -1,6 +1,7 @@
 import React from "react";
 
 const WorkoutTabs = ({ workouts, activeTab, setActiveTab }) => {
+
   return (
     <nav className="nav nav-tabs nav-justified">
       {workouts.map((workout, index) => (

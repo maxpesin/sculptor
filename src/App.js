@@ -8,15 +8,25 @@ const App = () => {
   const [data, setData] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
 
-  // Fetch workout data
-  useEffect(() => {
-    fetch("/data.json") // Update this if your JSON file is hosted elsewhere
+  // ✅ Define fetchData before using it
+  const fetchData = () => {
+    console.log("🚀 Fetching data from server...");
+    fetch("/data.json")
       .then((res) => res.json())
-      .then(setData)
-      .catch((err) => console.error("Error fetching data:", err));
+      .then((fetchedData) => {
+        console.log("✅ Data received:", fetchedData);
+        setData(fetchedData);
+      })
+      .catch((err) => console.error("❌ Error fetching data:", err));
+  };
+
+  // ✅ Call fetchData inside useEffect
+  useEffect(() => {
+    fetchData();
   }, []);
 
   if (!data) return <h1>Loading...</h1>;
+  // console.log("🚀 ~ //useEffect ~ data:", data)
 
   return (
     <div className="container">
@@ -39,6 +49,7 @@ const App = () => {
           index={index}
           data={data}
           isActive={activeTab === index}
+          updateData={fetchData}
         />
       ))}
     </div>
