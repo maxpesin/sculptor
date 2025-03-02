@@ -1,0 +1,22 @@
+{{#each routine}}
+
+<div class="card card-body mb-2 col-8 text-center" style="margin: 0 auto;">
+  <p>{{startDate}}</p>
+  <p>{{startTime}}</p>
+   <p>{{muscleTarget}}</p>
+    <h4>{{subject}}</h4>
+    <h4 style="text-align:left;">{{musclePrimary}}</h4>
+    
+    <a class="btn btn-dark btn-block col-4 mb-2" style="margin: 0 auto;" href="/routines/editRoutine/{{id}}">Edit Routine</a>
+    
+    <form method="post" action="/routines/{{id}}?_method=DELETE">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" class="btn btn-danger btn-block col-4" style="margin: 0 auto;" value="Delete">
+    </form>
+</div>
+
+{{else}}
+
+<p>No Routines Listed</p>
+
+{{/each}}

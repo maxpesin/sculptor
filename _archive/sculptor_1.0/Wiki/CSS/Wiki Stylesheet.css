@@ -1,0 +1,49 @@
+a {
+	text-decoration-style: none;
+}
+.back-button {
+	text-align: right;
+}
+.home-wiki {
+	right: 100%;
+	color: #000;
+}
+.body-slide {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+	display: hidden;
+	}
+.body-slide-open {
+	left: 231px;
+	}
+.body-slide-open .global-nav {
+	left: 0;
+	}
+.global-nav,
+.body-slide {
+	-webkit-transition: left 1.0s ease;
+	-moz-transition: left 1.0s ease;
+	transition: left 1.0s ease;
+	}
+.global-nav {
+	background-color: #333;
+	border-right:1px solid #000;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: -231px;
+	width: 210px;
+	height: 100%;
+	padding: 10px;
+	display: hidden;
+	}
+.global-nav a:link, .global-nav a:visited {
+	color: #FFF;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 6px 10px;
+	height: 28px
+	text-shadow: none;
+
+	}

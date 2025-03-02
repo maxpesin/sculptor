@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menus | Wiki</title>
+	<link rel="stylesheet" href="../../CSS/Wiki Stylesheet.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UATF-8">
+	<meta name="author" content="Milliano"> 
+	<meta name="description" content="These pages are used as a library to assist all contributing members of the Milliano Corporaiton"> 
+	<style> a {text-decoration: none}
+	</style>
+</head>
+<body class="body-slide body-slide-open">
+	<header>
+		<a href="#" class="menu-toggle"><h1>Wiki</h1></a>
+		<nav class="global-nav">
+		<a href="../../Home-Wiki.html">Home Wiki</a></p>
+		<a href="../Database Using PHP/Database Using PHP.html">Database Using PHP</a>
+		<p><a href="">Menus</a></p>
+		</nav>
+	</header>
+		<h2>Menus</h2>
+		<a href="">HTML . CSS . JavaScript</a></br>
+		<a href="">Other</a></br>
+		<a href="">Other</a></br>	
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<script>
+			(function() 
+				{
+				var body = $('body');
+				$('.menu-toggle').bind('click', function()
+				{
+				console.log('Menu Selected');
+				body.toggleClass('body-slide-open');
+				return false;
+				});
+				})();
+		</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{{#each errors}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+{{/each}}
+
+    <div class="card card-body col-8" style="margin:0 auto">
+    <h3>New Routine</h3>
+    
+    <form action="/routines" method="post">
+       
+        <div class="form-group">
+            <select type="text" class="form-control" id="musclePrimary" name="musclePrimary" onchange="populate(this.id,'muscleTarget')" required>
+                <option value="">Select Primary Muscle</option>
+                <option value="Arms">Arms</option>
+                <option value="Back">Back</option>
+                <option value="Biceps">Biceps</option>
+                <option value="Chest">Chest</option>
+                <option value="Core">Core</option>
+                <option value="Legs">Legs</option>
+                <option value="Shoulders">Shoulders</option>
+                <option value="Triceps">Triceps</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <select name="muscleTarget" id="muscleTarget" class="form-control" requried onchange="popExercise(this.id,'Subject','musclePrimary')">
+                <option value="">Select Muscle Target</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="subject">Exercise Name</label>
+            <input type="text" class="form-control" name="subject" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="startDate">Routine Date</label>
+            <input type="text" class="form-control" name="startDate">
+        </div>
+        
+        <div class="form-group">
+            <label for="startTime">Exercise Positon</label>
+            <input type="text" class="form-control" name="startTime">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+<script>
+function populate(MusclePrimary,MuscleTarget){
+    
+	var s1 = document.getElementById(MusclePrimary);
+	var s2 = document.getElementById(MuscleTarget);
+    
+	s2.innerHTML = "Select Muscle Target";
+    
+	if(s1.value == "Arms"){
+		var optionArray = ["Select Muscle Target","Forearm","Backarm"];
+    } 
+    else if(s1.value == "Back"){
+		var optionArray = ["Select Muscle Target","Whole","Lats","Middle","Lower Back"];
+	} 
+    else if(s1.value == "Biceps"){
+		var optionArray = ["Select Muscle Target","Whole","Long Head","Short Head"];
+	} 
+    else if(s1.value == "Chest"){
+		var optionArray = ["Select Muscle Target","Upper","Middle","Lower"];
+	} 
+    else if(s1.value == "Core"){
+		var optionArray = ["Select Muscle Target","Whole","Upper","Side","Lower"];
+	}
+    else if(s1.value == "Legs"){
+		var optionArray = ["Select Muscle Target","Quads","Hamstrings","Hips","Calfs"];
+	}
+    else if(s1.value == "Shoulders"){
+		var optionArray = ["Select Muscle Target","Whole","Front","Side","Rear","Traps"];
+	}
+    else if(s1.value == "Triceps"){
+		var optionArray = ["Select Muscle Target","Whole","Long Head","Lateral Head","Medial Head"];
+	} else ("Something went wrong!")
+    
+        
+    for(var option in optionArray){
+		var pair = optionArray[option];
+		var newOption = document.createElement("option");
+		newOption.value = pair;
+		newOption.innerHTML = pair;
+		s2.options.add(newOption);
+	}
+}
+</script>

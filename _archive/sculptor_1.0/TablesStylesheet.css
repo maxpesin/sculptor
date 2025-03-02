@@ -1,0 +1,37 @@
+body {
+	background: black;
+	color: gold;
+	text-align: center;
+	vertical-align: middle;
+}
+table {
+	width:200px;
+    margin:0px auto;
+    text-align: center;
+    padding:200px;
+    border:1px #DC143C;
+}
+input {
+	background: black;
+	border: 0.5px solid red;
+	border-radius: 8px;
+	color: gold;
+	text-align: center;
+}
+input:focus {
+	border: 1px solid gold;
+	outline: none;
+}
+input:hover {
+	border: 1px solid gold;
+}
+textarea {
+	width: 25%;
+	height: 200%;
+}
+.logo {
+	font-size: 4em;
+}
+grad {
+	background: radial-gradient(red, green, blue); 
+}

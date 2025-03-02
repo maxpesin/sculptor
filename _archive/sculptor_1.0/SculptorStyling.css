@@ -1,0 +1,138 @@
+/*------------------------------------------------ BODY*/
+body {
+	background-color: #000;
+	color: #000305;
+	font-size: 120%; /*Base font size is 14px */
+	
+	line-height: 1.5;
+	text-align: left;
+	color: white;
+}
+/*CLASS ------------------------------------------ H1*/
+.logo {
+	font-family: "Georgia";
+	position: fixed;
+	z-index: 1000;
+}
+
+
+a:link, a:visited {
+
+}
+
+a:hover, a:active {
+
+}
+
+/*CLASS ------------------------------------------ BODY*/
+
+.body {
+	margin: 0 auto;
+	width: 50%;
+	clear: both;
+}
+/*CLASS ------------------------------------------ GLOBAL NAVIGATION*/ 
+
+.hamburger-on {
+	background-color: #8A2BE2;
+	color: #fff;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+	padding: 10px;
+}
+
+.nav-hamburger {
+	background: #7FFF00;
+	position: fixed;
+	right: 0;
+	top: 0;
+	min-width: 200px;
+	display: none;
+}
+.global-nav img{
+	width: 60%;
+	height: auto;
+	margin: 2% 0;
+	float: center;
+}
+.nav-bookmarks nav {
+	background-color: #000;
+	height: 40px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	overflow: hidden;
+	position: fixed;
+}
+.nav-bookmarks nav ul {
+	list-style: none;
+	margin: 0 auto;
+}
+.nav-bookmarks nav ul li {
+	float: left:;
+	display: inline;
+}
+.nav-bookmarks nav ul li a {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.nav-bookmarks nav a:link, .HeaderContent nav a:visited {
+	color: #FFF;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 6px 10px;
+	height: 28px
+}
+.nav-bookmarks nav a:hover, .nav-bookmarks nav a:active, 
+.nav-bookmarks nav .activehover a:link, .nav-bookmarks nav a:active a:visited {
+	background: #e60000;
+	text-shadow: none;
+}
+/*CLASS ------------------------------------------ MAIN CONTENT*/
+
+.MainContent {
+	line-height: 25px;
+	overflow: hidden;
+	width: 70%;
+	margin: 10px 5px;
+}
+/*CLASS ------------------------------------------ TOP CONTENT*/
+.TopConent {
+	background-color: #000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.TopConent a:link, .TopConent a:visited {
+	color: #FFF;
+	display: inline-block;
+	padding: 6px 18px;
+	height: 28px
+}
+.TopConent a:hover, .TopConent a:active, 
+.TopConent .activehover a:link, .TopConent a:active a:visited {
+	background: #e60000;
+	text-shadow: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+/*CLASS ------------------------------------------ BOTTOM CONTENT*/
+.BottomContent {
+	background-color: #000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.BottomContent a:link, .BottomContent a:visited {
+	color: #FFF;
+	display: inline-block;
+	padding: 6px 18px;
+	height: 28px
+}
+.BottomContent a:hover, .BottomContent a:active, 
+.BottomContent .activehover a:link, .BottomContent a:active a:visited {
+	background: #e60000;
+	text-shadow: none;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;

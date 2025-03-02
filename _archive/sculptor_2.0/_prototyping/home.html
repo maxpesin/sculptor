@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset="utf-8" />
+  <title>Sculptor 3.0</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="logic.js"></script>
+ </head>
+ <body>
+  <br /><br />
+  <div class="container" style="width:600px;">
+   <h2 align="center">Sculptor 3.0</h2><br /><br />
+   
+   <select name="s1" id="s1" class="form-control input-lg" onchange="populate(this.id,'s2')">
+    <option value="">Select Major Muscle</option>
+    <option value="arms">Arms</option>
+    <option value="back">Back</option>
+    <option value="Biceps">Biceps</option>
+    <option value="chest">Chest</option>
+    <option value="core">Core</option>
+    <option value="legs">Legs</option>
+    <option value="shoulders">Shoulders</option>
+    <option value="triceps">Triceps</option>
+   </select>
+   
+   <br />
+   <select name="s2" id="s2" class="form-control input-lg" onchange="popExercise(this.id,'s3','s1')">
+    <option value="">Select Muscle Target</option>
+   </select>
+   <br />
+   <select name="s3" id="s3" class="form-control input-lg">
+    <option value="">Select Exercise</option>
+   </select>
+  </div>
+  
+  
+ </body>
+</html>
