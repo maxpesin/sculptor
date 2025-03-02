@@ -1,0 +1,176 @@
+{
+    "colors": [
+        "green",
+        "red",
+        "yellow",
+        "orange",
+        "blue",
+        "purple",
+        "white"
+    ],
+    "muscles": [
+        {
+            "mainMuscle": "back",
+            "color": "red",
+            "targetMuscle": [
+                "calisthenics",
+                "compound",
+                "secondary"
+            ]
+        },
+        {
+            "mainMuscle": "chest",
+            "color": "green",
+            "targetMuscle": [
+                "calisthenics",
+                "compound",
+                "secondary"
+            ]
+        },
+        {
+            "mainMuscle": "legs",
+            "color": "white",
+            "targetMuscle": [
+                "calisthenics",
+                "compound",
+                "secondary"
+            ]
+        },
+        {
+            "mainMuscle": "shoulders",
+            "color": "purple",
+            "targetMuscle": [
+                "calisthenics",
+                "compound",
+                "secondary"
+            ]
+        },
+        {
+            "mainMuscle": "triceps",
+            "color": "orange",
+            "targetMuscle": [
+                "primary"
+            ]
+        },
+        {
+            "mainMuscle": "biceps",
+            "color": "yellow",
+            "targetMuscle": [
+                "primary"
+            ]
+        },
+        {
+            "mainMuscle": "core",
+            "color": "blue",
+            "targetMuscle": [
+                "planks"
+            ]
+        }
+    ],
+    "workoutSplit": [
+        {
+            "muscles": [
+                "legs"
+            ]
+        },
+        {
+            "muscles": [
+                "back", "triceps", "biceps", "core"
+            ]
+        },
+        {
+            "muscles": [
+                "shoulders"
+            ]
+        },
+        {
+            "muscles": [
+                "chest", "triceps", "biceps", "core"
+            ]
+        }
+    ],
+    "equipment": [
+        {
+            "name": "green band"
+        },
+        {
+            "name": "blue band"
+        },
+        {
+            "name": "barbell"
+        },
+        {
+            "name": "dumbbells"
+        }
+    ],
+    "exercises": [
+        {
+            "name": "pull-ups",
+            "mainMuscle": "back",
+            "targetMuscle": "calisthenics",
+            "equipment": "green band",
+            "reps": "10-16",
+            "set1": 4,
+            "set2": 20,
+            "set3": 25,
+            "set4": 30,
+            "order": 1,
+            "orderFrequency": 4,
+            "countFrequency": 0
+        },
+        {
+            "name": "chin-ups",
+            "mainMuscle": "back",
+            "targetMuscle": "calisthenics",
+            "equipment": "blue band",
+            "reps": "8-12",
+            "set1": 8,
+            "set2": 30,
+            "set3": 15,
+            "set4": 50,
+            "order": 2
+        },
+        {
+            "name": "deadlifts",
+            "mainMuscle": "back",
+            "targetMuscle": "compound",
+            "equipment": "barbell",
+            "reps": "10-14",
+            "set1": 9,
+            "set2": 20,
+            "set3": 24,
+            "set4": 31
+        },
+        {
+            "name": "back rows",
+            "mainMuscle": "back",
+            "targetMuscle": "back secondary",
+            "equipment": "dumbbells",
+            "reps": "10-12",
+            "set1": 20,
+            "set2": 25,
+            "set3": 55,
+            "set4": 60
+        }
+    ],
+    "history": [
+        {
+            "date": "2021-01-01",
+            "exercise": "Pull-ups",
+            "reps": 10,
+            "sets": 4
+        },
+        {
+            "date": "2021-01-01",
+            "exercise": "Deadlifts",
+            "reps": 12,
+            "sets": 4
+        },
+        {
+            "date": "2021-01-01",
+            "exercise": "Back Rows",
+            "reps": 10,
+            "sets": 4
+        }
+    ]
+}

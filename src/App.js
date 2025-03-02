@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css"; // Import your styles
+import WorkoutTabs from "./components/WorkoutTabs";
+import Workout from "./components/Workout";
 
-function App() {
+const App = () => {
+  const [data, setData] = useState(null);
+  const [activeTab, setActiveTab] = useState(0);
+
+  // Fetch workout data
+  useEffect(() => {
+    fetch("/data.json") // Update this if your JSON file is hosted elsewhere
+      .then((res) => res.json())
+      .then(setData)
+      .catch((err) => console.error("Error fetching data:", err));
+  }, []);
+
+  if (!data) return <h1>Loading...</h1>;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header>
+        <h1 className="app-title">🏋️ Sculptor</h1>
       </header>
+
+      {/* Workout Tabs */}
+      <WorkoutTabs
+        workouts={data.workoutSplit}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
+
+      {/* Workout Content */}
+      {data.workoutSplit.map((workout, index) => (
+        <Workout
+          key={index}
+          workout={workout}
+          index={index}
+          data={data}
+          isActive={activeTab === index}
+        />
+      ))}
     </div>
   );
-}
+};
 
 export default App;
