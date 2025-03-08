@@ -122,154 +122,149 @@
   ],
   "exercises": [
     {
-      "name": "pull-ups",
-      "mainMuscle": "back",
-      "targetMuscle": "calisthenics",
-      "equipment": "green band",
-      "reps": "10-16",
-      "order": 3,
-      "orderFrequency": 2,
-      "countFrequency": 1
-    },
-    {
-      "name": "chin-ups",
-      "mainMuscle": "back",
-      "targetMuscle": "calisthenics",
-      "equipment": "blue band",
-      "reps": "8-12",
-      "order": 1,
-      "orderFrequency": 2,
-      "countFrequency": 1
-    },
-    {
-      "name": "V-ups",
-      "mainMuscle": "back",
-      "targetMuscle": "calisthenics",
-      "equipment": "blue band",
-      "reps": "8-12",
-      "order": 2,
-      "orderFrequency": 2,
-      "countFrequency": 1
-    },
-    {
-      "name": "deadlifts",
-      "mainMuscle": "back",
-      "targetMuscle": "compound",
-      "equipment": "barbell",
-      "reps": "10-14",
-      "countFrequency": 45,
-      "order": 1,
-      "id": 3442652345
-    },
-    {
-      "name": "back rows",
-      "mainMuscle": "back",
-      "targetMuscle": "back secondary",
-      "equipment": "dumbbells",
-      "reps": "10-12",
-      "countFrequency": 45
-    },
-    {
       "name": "squats",
       "mainMuscle": "legs",
-      "targetMuscle": "compound",
-      "equipment": "barbell",
-      "reps": "10-14",
-      "order": 1,
+      "targetMuscle": "calisthenics",
+      "equipment": "dumbbells",
+      "reps": "8-12",
+      "order": 2,
       "orderFrequency": 3,
-      "countFrequency": 1
+      "countFrequency": 1,
+      "id": 1741439497933
     },
     {
       "name": "lunges",
       "mainMuscle": "legs",
-      "targetMuscle": "compound",
-      "equipment": "barbell",
-      "reps": "10-14",
-      "order": 2,
-      "orderFrequency": 1,
-      "countFrequency": 1
-    },
-    {
-      "name": "Jumping Jacks",
-      "mainMuscle": "legs",
       "targetMuscle": "calisthenics",
       "equipment": "barbell",
-      "reps": "10-14",
-      "order": 4,
-      "orderFrequency": 2,
-      "countFrequency": 1,
-      "id": 1743200644406
-    },
-    {
-      "name": "Runnning",
-      "mainMuscle": "legs",
-      "targetMuscle": "calisthenics",
-      "equipment": "barbell",
-      "reps": "10-14",
-      "order": 3,
-      "orderFrequency": 2,
-      "countFrequency": 1,
-      "id": 3442342345
-    },
-    {
-      "name": "swimming",
-      "mainMuscle": "legs",
-      "targetMuscle": "calisthenics",
-      "equipment": "barbell",
-      "reps": "10-14",
-      "order": 2,
-      "orderFrequency": 3,
-      "countFrequency": 1,
-      "id": 1741646544406
-    },
-    {
-      "name": "side lunge",
-      "mainMuscle": "legs",
-      "targetMuscle": "calisthenics",
-      "equipment": "dumbbells",
       "reps": "8-12",
       "order": 1,
       "orderFrequency": 3,
-      "countFrequency": 1,
-      "id": 1741401371878
+      "countFrequency": 3,
+      "id": 1741439518587
+    },
+    {
+      "name": "test2",
+      "mainMuscle": "legs",
+      "targetMuscle": "compound",
+      "equipment": "green band",
+      "reps": "8-12",
+      "order": 1,
+      "orderFrequency": 3,
+      "countFrequency": 3,
+      "id": 1741447094659
+    },
+    {
+      "name": "test3",
+      "mainMuscle": "legs",
+      "targetMuscle": "secondary",
+      "equipment": "green band",
+      "reps": "8-12",
+      "order": 1,
+      "orderFrequency": 3,
+      "countFrequency": 3,
+      "id": 1741477370028
     }
   ],
   "history": [
     {
-      "date": "2021-01-01",
-      "exercise": "Running",
-      "exerciseId": 3442342345,
-      "set1": 20,
-      "set2": 22.5,
-      "set3": 25,
+      "date": "2025-03-08 10:17:29",
+      "exercise": "lunges",
+      "exerciseId": 1741439518587,
+      "set1": 1,
+      "set2": 2,
+      "set3": 3,
+      "set4": 4
+    },
+    {
+      "date": "2025-03-08 10:17:43",
+      "exercise": "lunges",
+      "exerciseId": 1741439518587,
+      "set1": 23,
+      "set2": 5,
+      "set3": 8,
+      "set4": 8
+    },
+    {
+      "date": "2025-03-08 10:17:49",
+      "exercise": "squats",
+      "exerciseId": 1741439497933,
+      "set1": 5,
+      "set2": 54,
+      "set3": 6,
+      "set4": 6
+    },
+    {
+      "date": "2025-03-08 10:17:51",
+      "exercise": "squats",
+      "exerciseId": 1741439497933,
+      "set1": 5,
+      "set2": 54,
+      "set3": 6,
+      "set4": 6
+    },
+    {
+      "date": "2025-03-08 10:17:53",
+      "exercise": "squats",
+      "exerciseId": 1741439497933,
+      "set1": 5,
+      "set2": 54,
+      "set3": 6,
+      "set4": 6
+    },
+    {
+      "date": "2025-03-08 18:43:00",
+      "exercise": "lunges",
+      "exerciseId": 1741439518587,
+      "set1": 23,
+      "set2": 5,
+      "set3": 8,
+      "set4": 8
+    },
+    {
+      "date": "2025-03-08 18:43:00",
+      "exercise": "test2",
+      "exerciseId": 1741447094659,
+      "set1": 0,
+      "set2": 0,
+      "set3": 0,
       "set4": 0
     },
     {
-      "date": "2022-01-01",
-      "exercise": "Running",
-      "exerciseId": 3442342345,
-      "set1": 25,
-      "set2": 25,
-      "set3": 27.5,
-      "set4": 30
-    },
-    {
-      "date": "2021-01-01",
-      "exercise": "Deadlifts",
-      "exerciseId": 3442652345,
-      "set1": 20,
-      "set2": 22.5,
-      "set3": 25,
+      "date": "2025-03-08 18:43:00",
+      "exercise": "test3",
+      "exerciseId": 1741477370028,
+      "set1": 0,
+      "set2": 0,
+      "set3": 0,
       "set4": 0
     },
     {
-      "date": "2021-01-01",
-      "exercise": "Back Rows",
-      "exerciseId": 2242652345,
-      "set1": 20,
-      "set2": 22.5,
-      "set3": 25,
+      "date": "2025-03-08 18:43:12",
+      "exercise": "lunges",
+      "exerciseId": 1741439518587,
+      "set1": 23,
+      "set2": 5,
+      "set3": 8,
+      "set4": 8
+    },
+    {
+      "date": "2025-03-08 18:43:12",
+      "exercise": "test2",
+      "exerciseId": 1741447094659,
+      "set1": 0,
+      "set2": 0,
+      "set3": 0,
       "set4": 0
+    },
+    {
+      "date": "2025-03-08 18:43:12",
+      "exercise": "test3",
+      "exerciseId": 1741477370028,
+      "set1": 5,
+      "set2": 7,
+      "set3": 8,
+      "set4": 9
     }
   ]
 }

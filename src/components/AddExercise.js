@@ -54,10 +54,27 @@ const AddExerciseForm = ({ updateData, data, muscles = [] }) => {
     <div className="add-exercise-form">
       <input type="text" name="name" placeholder="Exercise Name" value={exercise.name} onChange={handleChange} />
 
-      <ElemSelectMuscle name="mainMuscle" exercise={exercise} muscles={muscles} handleChange={handleMainMuscleChange} />
-      <ElemSelectTarget name="targetMuscle" exercise={exercise} targetMuscleOptions={targetMuscleOptions} handleChange={handleChange} />
-      <ElemSelectEquipment name="equipment" equipment={data.equipment} handleChange={handleChange} />
-      <ElemSelectReps name="reps" reps={data.reps} handleChange={handleChange} />
+      <ElemSelectMuscle
+        name="mainMuscle"
+        exercise={exercise}
+        muscles={muscles}
+        handleChange={handleMainMuscleChange} />
+
+      <ElemSelectTarget
+        name="targetMuscle"
+        exercise={exercise}
+        targetMuscleOptions={targetMuscleOptions}
+        handleChange={handleChange} />
+
+      <ElemSelectEquipment
+        name="equipment"
+        equipment={data.equipment}
+        handleChange={handleChange} />
+
+      <ElemSelectReps
+        name="reps"
+        reps={data.reps}
+        handleChange={handleChange} />
 
       <button onClick={handleAddExercise}>Add Exercise</button>
     </div>

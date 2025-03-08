@@ -32,7 +32,7 @@ const WorkoutRow = ({ muscle, target, data, updateData}) => {
   // console.log("🚀 Found exercise:", exercise);
 
   return (
-    <div className="sculptor__excercise-row">
+    <div className="sculptor__excercise-row" data-exercise-id={exercise ? exercise.id : null}>
       <span className="workout-form__workout-muscle workout-form__workout-muscle--red">
         {muscle.mainMuscle}
       </span>
@@ -40,45 +40,9 @@ const WorkoutRow = ({ muscle, target, data, updateData}) => {
       <span className="workout-form__excercise-name">
         {exercise ? exercise.name : "-"}
       </span>
-      {/* {history
-        .filter(last => last.exerciseId === exercise.id)
-        .map((last, index) => {
-          console.log("🚀 ~ WorkoutRow ~ last:", last); // ✅ Works correctly
-          return (
-            <input key={index} type="text" className="workout-form__input TEST" placeholder={last.set1} />
-          );
-        })} */}
-
-      {/* {history.length > 0 ? (
-        history.map((last, index) => {
-          console.log("🚀 ~ WorkoutRow ~ Matching History Entry:", last);
-
-          return (
-            <div key={index} class="workout-form__input-container">
-              {Object.keys(last)
-                .filter((key) => key.startsWith("set")) // ✅ Dynamically select all set keys
-                .map((setKey, setIndex) => (
-                  <input
-                    key={setIndex}
-                    type="text"
-                    className="workout-form__input TEST"
-                    placeholder={last[setKey] || "-"}
-                  />
-                ))}
-            </div>
-          );
-        })
-      ) : (
-        <input
-          type="text"
-          className="workout-form__input"
-          placeholder="-"
-        />
-      )} */}
-
-
-          {/* ✅ Always render 4 inputs (either with history or empty placeholders) */}
-          {Array.from({ length: 4 }).map((_, index) => {
+  
+        {/* ✅ Always render 4 inputs (either with history or empty placeholders) */}
+        {Array.from({ length: 4 }).map((_, index) => {
         const lastEntry = history.length > 0 ? history[history.length - 1] : null;
         const setKey = `set${index + 1}`;
         const value = lastEntry ? lastEntry[setKey] || "-" : "-"; // ✅ Use history if available, otherwise show `"-"`
@@ -92,12 +56,6 @@ const WorkoutRow = ({ muscle, target, data, updateData}) => {
           />
         );
       })}
-
-      {/* <input type="text" className="workout-form__input" placeholder="-" />
-      <input type="text" className="workout-form__input" placeholder="Set 2" />
-      <input type="text" className="workout-form__input" placeholder="Set 3" />
-      <input type="text" className="workout-form__input" placeholder="Set 4" /> */}
-
     </div>
   );
 };

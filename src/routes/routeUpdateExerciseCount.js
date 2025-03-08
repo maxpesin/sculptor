@@ -3,22 +3,21 @@ const fs = require("fs");
 const router = express.Router();
 
 const DATA_FILE = "./public/data.json";
-
-// Helper to read JSON data
 const readData = () => JSON.parse(fs.readFileSync(DATA_FILE, "utf8"));
 
 router.post("/update-exercise", (req, res) => {
-  const { muscles, exercises } = req.body;
+  const { muscles, exercises, history } = req.body;
   let data = readData();
   let updated = false;
 
   data.exercises.forEach((exercise) => {
-    if (muscles.includes(exercise.mainMuscle) && exercises.includes(exercise.name)) {
-      console.log("🚀 ~ Updating exercise:", exercise.name);
+    if (exercises.includes(exercise.id)) {
 
+      // If the exercise count is less than the order frequency, increment the count
       if (exercise.countFrequency < exercise.orderFrequency) {
         exercise.countFrequency += 1;
         updated = true;
+
       } else if (exercise.countFrequency === exercise.orderFrequency) {
         // Find all related exercises with the same mainMuscle and targetMuscle
         let relatedExercises = data.exercises.filter(
@@ -50,6 +49,12 @@ router.post("/update-exercise", (req, res) => {
       }
     }
   });
+
+  // Append new history records if provided
+  if (history && Array.isArray(history) && history.length > 0) {
+    data.history = data.history.concat(history);
+    updated = true;
+  }
 
   if (!updated) {
     console.log("⚠️ No exercises were updated!");
