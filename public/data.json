@@ -109,6 +109,17 @@
       "name": "dumbbells"
     }
   ],
+  "reps": [
+    {
+      "name": "8-12"
+    },
+    {
+      "name": "10-14"
+    },
+    {
+      "name": "10-16"
+    }
+  ],
   "exercises": [
     {
       "name": "pull-ups",
@@ -116,7 +127,7 @@
       "targetMuscle": "calisthenics",
       "equipment": "green band",
       "reps": "10-16",
-      "order": 1,
+      "order": 3,
       "orderFrequency": 2,
       "countFrequency": 1
     },
@@ -126,7 +137,7 @@
       "targetMuscle": "calisthenics",
       "equipment": "blue band",
       "reps": "8-12",
-      "order": 2,
+      "order": 1,
       "orderFrequency": 2,
       "countFrequency": 1
     },
@@ -136,7 +147,7 @@
       "targetMuscle": "calisthenics",
       "equipment": "blue band",
       "reps": "8-12",
-      "order": 3,
+      "order": 2,
       "orderFrequency": 2,
       "countFrequency": 1
     },
@@ -146,11 +157,9 @@
       "targetMuscle": "compound",
       "equipment": "barbell",
       "reps": "10-14",
-      "set1": 9,
-      "set2": 20,
-      "set3": 24,
-      "set4": 31,
-      "countFrequency": 45
+      "countFrequency": 45,
+      "order": 1,
+      "id": 3442652345
     },
     {
       "name": "back rows",
@@ -158,10 +167,6 @@
       "targetMuscle": "back secondary",
       "equipment": "dumbbells",
       "reps": "10-12",
-      "set1": 20,
-      "set2": 25,
-      "set3": 55,
-      "set4": 60,
       "countFrequency": 45
     },
     {
@@ -170,13 +175,9 @@
       "targetMuscle": "compound",
       "equipment": "barbell",
       "reps": "10-14",
-      "set1": 20,
-      "set2": 25,
-      "set3": 55,
-      "set4": 60,
       "order": 1,
-      "orderFrequency": 4,
-      "countFrequency": 45
+      "orderFrequency": 3,
+      "countFrequency": 1
     },
     {
       "name": "lunges",
@@ -184,33 +185,91 @@
       "targetMuscle": "compound",
       "equipment": "barbell",
       "reps": "10-14",
-      "set1": 20,
-      "set2": 25,
-      "set3": 55,
-      "set4": 60,
+      "order": 2,
+      "orderFrequency": 1,
+      "countFrequency": 1
+    },
+    {
+      "name": "Jumping Jacks",
+      "mainMuscle": "legs",
+      "targetMuscle": "calisthenics",
+      "equipment": "barbell",
+      "reps": "10-14",
+      "order": 4,
+      "orderFrequency": 2,
+      "countFrequency": 1,
+      "id": 1743200644406
+    },
+    {
+      "name": "Runnning",
+      "mainMuscle": "legs",
+      "targetMuscle": "calisthenics",
+      "equipment": "barbell",
+      "reps": "10-14",
+      "order": 3,
+      "orderFrequency": 2,
+      "countFrequency": 1,
+      "id": 3442342345
+    },
+    {
+      "name": "swimming",
+      "mainMuscle": "legs",
+      "targetMuscle": "calisthenics",
+      "equipment": "barbell",
+      "reps": "10-14",
+      "order": 2,
+      "orderFrequency": 3,
+      "countFrequency": 1,
+      "id": 1741646544406
+    },
+    {
+      "name": "side lunge",
+      "mainMuscle": "legs",
+      "targetMuscle": "calisthenics",
+      "equipment": "dumbbells",
+      "reps": "8-12",
       "order": 1,
-      "orderFrequency": 4,
-      "countFrequency": 4
+      "orderFrequency": 3,
+      "countFrequency": 1,
+      "id": 1741401371878
     }
   ],
   "history": [
     {
       "date": "2021-01-01",
-      "exercise": "Pull-ups",
-      "reps": 10,
-      "sets": 4
+      "exercise": "Running",
+      "exerciseId": 3442342345,
+      "set1": 20,
+      "set2": 22.5,
+      "set3": 25,
+      "set4": 0
+    },
+    {
+      "date": "2022-01-01",
+      "exercise": "Running",
+      "exerciseId": 3442342345,
+      "set1": 25,
+      "set2": 25,
+      "set3": 27.5,
+      "set4": 30
     },
     {
       "date": "2021-01-01",
       "exercise": "Deadlifts",
-      "reps": 12,
-      "sets": 4
+      "exerciseId": 3442652345,
+      "set1": 20,
+      "set2": 22.5,
+      "set3": 25,
+      "set4": 0
     },
     {
       "date": "2021-01-01",
       "exercise": "Back Rows",
-      "reps": 10,
-      "sets": 4
+      "exerciseId": 2242652345,
+      "set1": 20,
+      "set2": 22.5,
+      "set3": 25,
+      "set4": 0
     }
   ]
 }

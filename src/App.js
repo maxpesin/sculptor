@@ -3,6 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css"; // Import your styles
 import WorkoutTabs from "./components/WorkoutTabs";
 import Workout from "./components/Workout";
+import AddExerciseForm from "./components/AddExercise.js";
+// import ExerciseDialog from "./components/ExerciseDialog"; // ✅ Import the dialog component
+
+//TODO - hardcode history to show latest data
+//TODO - update history exercises data when button pressed
+//TODO - Add pound vs kilogram toggle
 
 const App = () => {
   const [data, setData] = useState(null);
@@ -33,6 +39,13 @@ const App = () => {
       <header>
         <h1 className="app-title">🏋️ Sculptor</h1>
       </header>
+
+      {/* ✅ Add Exercise Form
+      <AddExerciseForm updateData={fetchData} /> */}
+      {/* ✅ Only pass `muscles` when `data` is available */}
+      
+      {data && <AddExerciseForm updateData={fetchData} data={data} muscles={data.muscles || []} />}
+
 
       {/* Workout Tabs */}
       <WorkoutTabs

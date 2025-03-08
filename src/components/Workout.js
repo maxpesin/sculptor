@@ -20,7 +20,7 @@ const Workout = ({ workout, index, data, isActive, updateData }) => {
           : null;
       })}
 
-      <WorkoutPost workout={workout} updateData={updateData}/>
+      <WorkoutPost workout={workout} updateData={updateData} exercises={data.exercises}/>
     </div>
   );
 };
