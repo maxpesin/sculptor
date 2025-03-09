@@ -2,7 +2,7 @@ import React from "react";
 import WorkoutRow from "./WorkoutRow";
 import WorkoutCompleted from "./WorkoutCompleted";
 
-const Workout = ({ workout, data, isActive, updateData, onExerciseClick, onTargetClick }) => {
+const WorkoutPane = ({ workout, data, isActive, updateData, onExerciseClick, onTargetClick }) => {
 
   return (
     <div className={`sculptor__workout ${isActive ? "active" : ""}`}>
@@ -20,7 +20,6 @@ const Workout = ({ workout, data, isActive, updateData, onExerciseClick, onTarge
                 muscle={muscle}
                 target={target}
                 data={data}
-                updateData={updateData}
                 onExerciseClick={onExerciseClick}
                 onTargetClick={onTargetClick}
               />
@@ -36,4 +35,4 @@ const Workout = ({ workout, data, isActive, updateData, onExerciseClick, onTarge
   );
 };
 
-export default Workout;
+export default WorkoutPane;

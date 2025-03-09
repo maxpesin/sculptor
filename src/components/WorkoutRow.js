@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-const WorkoutRow = ({ muscle, target, data, updateData, onExerciseClick, onTargetClick}) => {
-// console.log("🚀 ~ WorkoutRow ~ muscle:", muscle)
+const WorkoutRow = ({ muscle, target, data, onExerciseClick, onTargetClick}) => {
 
   const [history, setHistory] = useState([]);
-
-  // if (!data || !data.exercises) {
-  //   console.error("❌ No exercise data found:", data);
-  //   return null; // Prevents the component from rendering if data is missing
-  // }
-
   const exercise = data.exercises.find(
     (ex) =>
       ex.mainMuscle === muscle.mainMuscle &&
@@ -27,19 +20,16 @@ const WorkoutRow = ({ muscle, target, data, updateData, onExerciseClick, onTarge
     }
   }, [data.history, exercise]); // ✅ Dependency array ensures it only runs when data.history or exercise changes
 
-  // console.log("🚀 ~ useEffect ~ exercise:", exercise)
-  // console.log("🚀 ~ WorkoutRow ~ history:", history)
-  // console.log("🚀 Found exercise:", exercise);
-
   return (
     <div className="sculptor__excercise-row" data-exercise-id={exercise ? exercise.id : null}>
-      <span className="workout-form__workout-muscle workout-form__workout-muscle--red">
+      <span className={`sculptor__excercise-muscle-${muscle.color}`}>
         {muscle.mainMuscle}
       </span>
       <span 
         className="workout-form__excercise-target"
-        onClick={() => onTargetClick && exercise && onTargetClick(exercise.id)}>
-          {target}
+        onClick={() => onTargetClick && exercise && onTargetClick(exercise.id)}
+        >
+        {target}
       </span>
       <span 
         className="workout-form__excercise-name"
@@ -52,13 +42,13 @@ const WorkoutRow = ({ muscle, target, data, updateData, onExerciseClick, onTarge
         {Array.from({ length: 4 }).map((_, index) => {
         const lastEntry = history.length > 0 ? history[history.length - 1] : null;
         const setKey = `set${index + 1}`;
-        const value = lastEntry ? lastEntry[setKey] || "-" : "-"; // ✅ Use history if available, otherwise show `"-"`
+        const value = lastEntry ? lastEntry[setKey] || "-" : "-";
 
         return (
           <input
             key={index}
             type="text"
-            className="workout-form__input TEST"
+            className="workout-form__input"
             placeholder={value}
           />
         );

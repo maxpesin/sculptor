@@ -56,6 +56,43 @@ body {
   right: 0;
 }
 
+[class^="sculptor__excercise-muscle"] {
+  /* styles for any muscle element regardless of the suffix */
+}
+
+.sculptor__excercise-muscle-white {
+  background-color: var(--white);
+  color: black;
+}
+
+.sculptor__excercise-muscle-red {
+  background-color: var(--red);
+}
+
+.sculptor__excercise-muscle-orange {
+  background-color: var(--orange);
+  color: black;
+}
+
+.sculptor__excercise-muscle-yellow {
+  background-color: var(--yellow);
+  color: black;
+}
+
+.sculptor__excercise-muscle-blue {
+  background-color: var(--blue);
+  color: black;
+}
+
+.sculptor__excercise-muscle-purple {
+  background-color: var(--purple);
+}
+
+.sculptor__excercise-muscle-green {
+  background-color: var(--green);
+  color: black;
+}
+
 .sculptor__workout {
   display: none;
   max-width: 1000px;
@@ -75,10 +112,13 @@ body {
   margin-bottom: 40px;
 }
 
+.sculptor__excercise-row {
+  color: var(--white);
+}
+
 .sculptor__excercise-row span {
   min-width: 120px;
   display: inline-block;
-  color: var(--white);
   text-align: center;
   border-radius: 20px;
   font-weight: bold;

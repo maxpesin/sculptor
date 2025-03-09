@@ -2,7 +2,7 @@
 import React from "react";
 // import "./ExerciseDialog.css";
 
-const ExerciseDialog = ({ isOpen, onClose, children }) => {
+const ModalWindow = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
   return (
@@ -17,4 +17,4 @@ const ExerciseDialog = ({ isOpen, onClose, children }) => {
   );
 };
 
-export default ExerciseDialog;
+export default ModalWindow;
