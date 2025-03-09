@@ -2,7 +2,7 @@ import React from "react";
 import WorkoutRow from "./WorkoutRow";
 import WorkoutCompleted from "./WorkoutCompleted";
 
-const Workout = ({ workout, data, isActive, updateData }) => {
+const Workout = ({ workout, data, isActive, updateData, onExerciseClick, onTargetClick }) => {
 
   return (
     <div className={`sculptor__workout ${isActive ? "active" : ""}`}>
@@ -21,6 +21,8 @@ const Workout = ({ workout, data, isActive, updateData }) => {
                 target={target}
                 data={data}
                 updateData={updateData}
+                onExerciseClick={onExerciseClick}
+                onTargetClick={onTargetClick}
               />
             ))
           : null;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const WorkoutRow = ({ muscle, target, data, updateData}) => {
+const WorkoutRow = ({ muscle, target, data, updateData, onExerciseClick, onTargetClick}) => {
 // console.log("🚀 ~ WorkoutRow ~ muscle:", muscle)
 
   const [history, setHistory] = useState([]);
@@ -36,8 +36,15 @@ const WorkoutRow = ({ muscle, target, data, updateData}) => {
       <span className="workout-form__workout-muscle workout-form__workout-muscle--red">
         {muscle.mainMuscle}
       </span>
-      <span className="workout-form__excercise-target">{target}</span>
-      <span className="workout-form__excercise-name">
+      <span 
+        className="workout-form__excercise-target"
+        onClick={() => onTargetClick && exercise && onTargetClick(exercise.id)}>
+          {target}
+      </span>
+      <span 
+        className="workout-form__excercise-name"
+        onClick={() => onExerciseClick && exercise && onExerciseClick(exercise.id)}
+        >
         {exercise ? exercise.name : "-"}
       </span>
   
@@ -56,6 +63,11 @@ const WorkoutRow = ({ muscle, target, data, updateData}) => {
           />
         );
       })}
+
+      {/* Display the exercise.reps as a span after the 4th input */}
+      <span className="workout-form__excercise-reps">
+        {exercise ? exercise.reps : "-"}
+      </span>
     </div>
   );
 };

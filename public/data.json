@@ -124,147 +124,183 @@
     {
       "name": "squats",
       "mainMuscle": "legs",
-      "targetMuscle": "calisthenics",
+      "targetMuscle": "compound",
       "equipment": "dumbbells",
       "reps": "8-12",
       "order": 2,
       "orderFrequency": 3,
       "countFrequency": 1,
-      "id": 1741439497933
+      "id": 1741483800147
     },
     {
       "name": "lunges",
       "mainMuscle": "legs",
-      "targetMuscle": "calisthenics",
-      "equipment": "barbell",
-      "reps": "8-12",
-      "order": 1,
-      "orderFrequency": 3,
-      "countFrequency": 3,
-      "id": 1741439518587
-    },
-    {
-      "name": "test2",
-      "mainMuscle": "legs",
       "targetMuscle": "compound",
       "equipment": "green band",
-      "reps": "8-12",
+      "reps": "10-14",
       "order": 1,
       "orderFrequency": 3,
-      "countFrequency": 3,
-      "id": 1741447094659
+      "countFrequency": 1,
+      "id": 1741483871365
     },
     {
-      "name": "test3",
+      "name": "michael",
       "mainMuscle": "legs",
-      "targetMuscle": "secondary",
+      "targetMuscle": "calisthenics",
       "equipment": "green band",
-      "reps": "8-12",
+      "reps": "",
+      "order": 2,
+      "orderFrequency": 3,
+      "countFrequency": 1,
+      "id": 1741526982412
+    },
+    {
+      "name": "kevin",
+      "mainMuscle": "legs",
+      "targetMuscle": "calisthenics",
+      "equipment": "green band",
+      "reps": "10-14",
       "order": 1,
       "orderFrequency": 3,
-      "countFrequency": 3,
-      "id": 1741477370028
+      "countFrequency": 1,
+      "id": 1741527033082
     }
   ],
   "history": [
     {
-      "date": "2025-03-08 10:17:29",
-      "exercise": "lunges",
-      "exerciseId": 1741439518587,
-      "set1": 1,
-      "set2": 2,
-      "set3": 3,
-      "set4": 4
-    },
-    {
-      "date": "2025-03-08 10:17:43",
-      "exercise": "lunges",
-      "exerciseId": 1741439518587,
-      "set1": 23,
-      "set2": 5,
-      "set3": 8,
-      "set4": 8
-    },
-    {
-      "date": "2025-03-08 10:17:49",
+      "date": "2025-03-08 20:30:26",
       "exercise": "squats",
-      "exerciseId": 1741439497933,
-      "set1": 5,
-      "set2": 54,
-      "set3": 6,
-      "set4": 6
+      "exerciseId": 1741483800147,
+      "set1": 20,
+      "set2": 40,
+      "set3": 45,
+      "set4": 60
     },
     {
-      "date": "2025-03-08 10:17:51",
+      "date": "2025-03-08 20:30:48",
       "exercise": "squats",
-      "exerciseId": 1741439497933,
-      "set1": 5,
-      "set2": 54,
-      "set3": 6,
-      "set4": 6
+      "exerciseId": 1741483800147,
+      "set1": 45,
+      "set2": 20,
+      "set3": 40,
+      "set4": 5
     },
     {
-      "date": "2025-03-08 10:17:53",
+      "date": "2025-03-08 20:30:52",
       "exercise": "squats",
-      "exerciseId": 1741439497933,
-      "set1": 5,
-      "set2": 54,
-      "set3": 6,
-      "set4": 6
+      "exerciseId": 1741483800147,
+      "set1": 45,
+      "set2": 20,
+      "set3": 40,
+      "set4": 5
     },
     {
-      "date": "2025-03-08 18:43:00",
+      "date": "2025-03-08 20:31:20",
+      "exercise": "squats",
+      "exerciseId": 1741483800147,
+      "set1": 45,
+      "set2": 20,
+      "set3": 40,
+      "set4": 5
+    },
+    {
+      "date": "2025-03-08 20:31:21",
+      "exercise": "squats",
+      "exerciseId": 1741483800147,
+      "set1": 45,
+      "set2": 20,
+      "set3": 40,
+      "set4": 5
+    },
+    {
+      "date": "2025-03-08 20:31:23",
+      "exercise": "squats",
+      "exerciseId": 1741483800147,
+      "set1": 45,
+      "set2": 20,
+      "set3": 40,
+      "set4": 5
+    },
+    {
+      "date": "2025-03-08 20:31:37",
       "exercise": "lunges",
-      "exerciseId": 1741439518587,
-      "set1": 23,
-      "set2": 5,
-      "set3": 8,
-      "set4": 8
+      "exerciseId": 1741483871365,
+      "set1": 20,
+      "set2": 60,
+      "set3": 30,
+      "set4": 60
     },
     {
-      "date": "2025-03-08 18:43:00",
-      "exercise": "test2",
-      "exerciseId": 1741447094659,
-      "set1": 0,
-      "set2": 0,
-      "set3": 0,
-      "set4": 0
-    },
-    {
-      "date": "2025-03-08 18:43:00",
-      "exercise": "test3",
-      "exerciseId": 1741477370028,
-      "set1": 0,
-      "set2": 0,
-      "set3": 0,
-      "set4": 0
-    },
-    {
-      "date": "2025-03-08 18:43:12",
+      "date": "2025-03-08 20:31:39",
       "exercise": "lunges",
-      "exerciseId": 1741439518587,
-      "set1": 23,
-      "set2": 5,
-      "set3": 8,
-      "set4": 8
+      "exerciseId": 1741483871365,
+      "set1": 20,
+      "set2": 60,
+      "set3": 30,
+      "set4": 60
     },
     {
-      "date": "2025-03-08 18:43:12",
-      "exercise": "test2",
-      "exerciseId": 1741447094659,
-      "set1": 0,
-      "set2": 0,
-      "set3": 0,
-      "set4": 0
+      "date": "2025-03-08 20:31:41",
+      "exercise": "lunges",
+      "exerciseId": 1741483871365,
+      "set1": 20,
+      "set2": 60,
+      "set3": 30,
+      "set4": 60
     },
     {
-      "date": "2025-03-08 18:43:12",
-      "exercise": "test3",
-      "exerciseId": 1741477370028,
-      "set1": 5,
-      "set2": 7,
-      "set3": 8,
-      "set4": 9
+      "date": "2025-03-09 09:30:05",
+      "exercise": "michael",
+      "exerciseId": 1741526982412,
+      "set1": 20,
+      "set2": 25,
+      "set3": 30,
+      "set4": 40
+    },
+    {
+      "date": "2025-03-09 09:30:05",
+      "exercise": "squats",
+      "exerciseId": 1741483800147,
+      "set1": 45,
+      "set2": 20,
+      "set3": 40,
+      "set4": 5
+    },
+    {
+      "date": "2025-03-09 09:30:40",
+      "exercise": "michael",
+      "exerciseId": 1741526982412,
+      "set1": 20,
+      "set2": 25,
+      "set3": 30,
+      "set4": 40
+    },
+    {
+      "date": "2025-03-09 09:30:40",
+      "exercise": "squats",
+      "exerciseId": 1741483800147,
+      "set1": 45,
+      "set2": 20,
+      "set3": 40,
+      "set4": 5
+    },
+    {
+      "date": "2025-03-09 09:30:44",
+      "exercise": "michael",
+      "exerciseId": 1741526982412,
+      "set1": 20,
+      "set2": 25,
+      "set3": 30,
+      "set4": 40
+    },
+    {
+      "date": "2025-03-09 09:30:44",
+      "exercise": "squats",
+      "exerciseId": 1741483800147,
+      "set1": 45,
+      "set2": 20,
+      "set3": 40,
+      "set4": 5
     }
   ]
 }
