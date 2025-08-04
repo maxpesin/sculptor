@@ -1,27 +1,30 @@
+/* Gladiator inspired color palette */
 :root {
-  --white: #f5f5f5;
-  --green: #4caf50;
-  --yellow: #d4a017;
-  --orange: #e67e22;
-  --red: #c0392b;
-  --purple: #8e44ad;
-  --blue: #2980b9;
+  --white: #f4f1de; /* marble */
+  --green: #c9a14d; /* gold */
+  --yellow: #b87333; /* bronze */
+  --orange: #d2691e; /* copper */
+  --red: #7d0000; /* crimson */
+  --purple: #5e42a6; /* royal purple */
+  --blue: #1f3c88; /* deep navy */
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #000;
+  font-family: 'Cinzel', serif;
+  background-color: #1a1a1a;
+  color: var(--white);
   padding: 40px 0;
-  /* background-image: url('/img/dark-gym-background-desktop.webp'); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+    url('/img/dark-gym-background-desktop.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   text-transform: capitalize;
 }
 
 .app-title {
-  color: var(--white);
+  color: var(--green);
   text-align: center;
 }
 
@@ -54,6 +57,16 @@ body {
 .sculptor__button-add-exercise {
   position: absolute;
   right: 0;
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.sculptor__button-add-exercise:hover {
+  background-color: var(--yellow);
+  color: black;
 }
 
 [class^="sculptor__excercise-muscle"] {
@@ -197,4 +210,53 @@ body {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 0;
+  }
+
+  .nav-tabs {
+    margin-top: 20px;
+  }
+
+  .nav-tabs .nav-link {
+    font-size: 16px;
+  }
+
+  .sculptor__workout {
+    padding: 20px 0;
+  }
+
+  .sculptor__workout-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-tabs {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-tabs .nav-link {
+    font-size: 14px;
+  }
+
+  .sculptor__button-add-exercise {
+    position: static;
+    margin-left: auto;
+  }
+
+  .sculptor__workout-button {
+    font-size: 16px;
+    margin-top: 60px;
+  }
+
+  .sculptor__excercise-row span {
+    min-width: 80px;
+  }
 }
