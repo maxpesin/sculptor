@@ -36,7 +36,7 @@ const WorkoutRow = ({ muscle, target, data, onExerciseClick, onTargetClick }) =>
 
     console.log("⚔️ Recording combat performance:", updateData);
 
-    fetch("http://localhost:5000/update-exercise-count", {
+    fetch("/api/update-exercise", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updateData),
