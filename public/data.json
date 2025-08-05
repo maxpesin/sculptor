@@ -227,6 +227,17 @@
       "orderFrequency": 3,
       "countFrequency": 2,
       "id": 1754362040090
+    },
+    {
+      "name": "centurion strike",
+      "mainMuscle": "chest",
+      "targetMuscle": "compound",
+      "equipment": "dumbbells",
+      "reps": "8-12",
+      "order": 3,
+      "orderFrequency": 3,
+      "countFrequency": 1,
+      "id": 1754362154019
     }
   ],
   "history": [
