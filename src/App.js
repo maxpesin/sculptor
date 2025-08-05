@@ -6,7 +6,6 @@ import FormAddExercise from "./components/FormAddExercise";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-
 const App = () => {
   const [data, setData] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
@@ -18,24 +17,24 @@ const App = () => {
   const [selectedExercise, setSelectedExercise] = useState(null);
 
   const fetchData = () => {
-    console.log("🚀 Fetching data from server...");
+    console.log("🏛️ Fetching gladiator data from the arena...");
     fetch("/data.json")
       .then((res) => res.json())
       .then((fetchedData) => {
-        console.log("✅ Data received:", fetchedData);
+        console.log("⚔️ Training data received:", fetchedData);
         setData(fetchedData);
       })
-      .catch((err) => console.error("❌ Error fetching data:", err));
+      .catch((err) => console.error("💀 Error fetching arena data:", err));
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
-   // Callback for when an exercise name is clicked.
-   const handleExerciseClick = (exerciseId) => {
-    const exercise = data.exercises.find((ex) => ex.id === exerciseId); // Find the exercise from the data.
-    const history = data.history.filter((entry) => entry.exerciseId === exerciseId); // Filter the history for that exercise.
+  // Callback for when a combat technique name is clicked.
+  const handleExerciseClick = (exerciseId) => {
+    const exercise = data.exercises.find((ex) => ex.id === exerciseId);
+    const history = data.history.filter((entry) => entry.exerciseId === exerciseId);
     setSelectedExercise(exercise);
     setExerciseHistory(history);
     setShowHistoryDialog(true);
@@ -57,93 +56,147 @@ const App = () => {
     }
   };
 
-  if (!data) return <h1>Loading...</h1>;
-  console.log("🚀 ~ App ~ data:", data)
+  if (!data) return (
+    <div className="gladius-loading">
+      <div className="loading-statue">
+        <img src="https://images.unsplash.com/photo-1567522874215-d5e2f1bee83d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxyb21hbiUyMHN0YXR1ZXxlbnwwfHx8YmxhY2t8MTc1NDM2MTMxOXww&ixlib=rb-4.1.0&q=85" alt="Loading" />
+        <h1 className="loading-text">Preparing the Arena...</h1>
+      </div>
+    </div>
+  );
 
   return (
-    <div className="container">
-      <header class="sculptor__header">
-        <h1 className="app-title">🏋️ Sculptor</h1>
-        <button 
-          class="sculptor__button-add-exercise"
-          onClick={() => setShowAddExerciseDialog(true)}
-          type="button"
-        >
-          + Exercise
-        </button>
-      </header>
+    <div className="gladius-arena">
+      {/* Colosseum Background */}
+      <div className="colosseum-background"></div>
+      
+      {/* Main Arena Container */}
+      <div className="arena-container">
+        {/* Arena Header */}
+        <header className="arena-header">
+          <div className="header-statue">
+            <img src="https://images.unsplash.com/photo-1601887389937-0b02c26b602c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxyb21hbiUyMHN0YXR1ZXxlbnwwfHx8YmxhY2t8MTc1NDM2MTMxOXww&ixlib=rb-4.1.0&q=85" alt="Roman Statue" className="header-statue-img" />
+          </div>
+          <div className="header-content">
+            <h1 className="arena-title">
+              <span className="title-main">GLADIUS</span>
+              <span className="title-sub">ARENA</span>
+              <span className="title-motto">Virtus et Honor</span>
+            </h1>
+            <button 
+              className="roman-button add-technique-btn"
+              onClick={() => setShowAddExerciseDialog(true)}
+              type="button"
+            >
+              <span className="button-icon">⚔️</span>
+              <span>Add Combat Technique</span>
+            </button>
+          </div>
+        </header>
 
-      {/* Workout Tabs */}
-      <WorkoutTabs
-        workouts={data.workoutSplit}
-        activeTab={activeTab}
-        setActiveTab={setActiveTab} />
+        {/* Training Grounds Navigation */}
+        <div className="training-grounds-nav">
+          <h2 className="nav-title">Select Your Training Ground</h2>
+          <WorkoutTabs
+            workouts={data.workoutSplit}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab} 
+          />
+        </div>
 
-      {/* Workout Pane */}
-      {data.workoutSplit.map((workout, index) => (
-        <WorkoutPane
-          workout={workout}
-          data={data}
-          isActive={activeTab === index}
-          updateData={fetchData}
-          onExerciseClick={handleExerciseClick}
-          onTargetClick={handleTargetClick}
-        />
-      ))}
+        {/* Battle Preparation Areas */}
+        <div className="battle-preparations">
+          {data.workoutSplit.map((workout, index) => (
+            <WorkoutPane
+              key={index}
+              workout={workout}
+              data={data}
+              isActive={activeTab === index}
+              updateData={fetchData}
+              onExerciseClick={handleExerciseClick}
+              onTargetClick={handleTargetClick}
+            />
+          ))}
+        </div>
+      </div>
 
-      {/* Modal Window - Add Exercise Form */}
+      {/* Modal Window - Add Combat Technique */}
       <ModalWindow isOpen={showAddExerciseDialog} onClose={() => setShowAddExerciseDialog(false)}>
-        <h2>Add New Exercise</h2>
+        <div className="modal-header-roman">
+          <h2 className="modal-title">Forge New Combat Technique</h2>
+          <p className="modal-subtitle">Train like the gladiators of old</p>
+        </div>
         <FormAddExercise
           updateData={fetchData}
           data={data}
-          muscles={data.muscles || []} />
+          muscles={data.muscles || []} 
+        />
       </ModalWindow>
 
-      {/* Modal Window - Exercise History */}
+      {/* Modal Window - Victory Chronicles */}
       <ModalWindow isOpen={showHistoryDialog} onClose={() => setShowHistoryDialog(false)}>
         {selectedExercise && (
-          <>
-            <h2>{selectedExercise.name} History</h2>
+          <div className="victory-chronicles">
+            <div className="modal-header-roman">
+              <h2 className="modal-title">{selectedExercise.name} Chronicles</h2>
+              <p className="modal-subtitle">Record of your battles</p>
+            </div>
             {exerciseHistory.length > 0 ? (
-              <ul>
+              <div className="chronicles-list">
                 {exerciseHistory.map((entry, idx) => {
-                  // Format the date as "Jan 12, 2024"
                   const formattedDate = new Date(entry.date).toLocaleDateString("en-US", {
                     month: "short",
                     day: "numeric",
                     year: "numeric",
                   });
                   return (
-                    <li key={idx}>
-                      {formattedDate} - Set1: {entry.set1}, Set2: {entry.set2}, Set3: {entry.set3}, Set4: {entry.set4}
-                    </li>
+                    <div key={idx} className="chronicle-entry">
+                      <div className="chronicle-date">{formattedDate}</div>
+                      <div className="chronicle-details">
+                        <span>Round I: {entry.set1}</span>
+                        <span>Round II: {entry.set2}</span>
+                        <span>Round III: {entry.set3}</span>
+                        <span>Round IV: {entry.set4}</span>
+                      </div>
+                    </div>
                   );
                 })}
-              </ul>
+              </div>
             ) : (
-              <p>No history available.</p>
+              <div className="no-chronicles">
+                <p>No battle records found. Begin your training to forge your legacy!</p>
+              </div>
             )}
-          </>
+          </div>
         )}
       </ModalWindow>
 
-      {/* Modal Window - Target Exercises */}
+      {/* Modal Window - Combat Mastery Options */}
       <ModalWindow isOpen={showTargetDialog} onClose={() => setShowTargetDialog(false)}>
-        <h2>Target Options</h2>
-        {targetOptions.length > 0 ? (
-          <ol>
-            {targetOptions.map((option) => (
-              <li key={option.id}>
-                Order {option.order}: {option.name} (Reps: {option.reps})
-              </li>
-            ))}
-          </ol>
-        ) : (
-          <p>No target options available.</p>
-        )}
+        <div className="combat-mastery">
+          <div className="modal-header-roman">
+            <h2 className="modal-title">Mastery Progression</h2>
+            <p className="modal-subtitle">Path of the Warrior</p>
+          </div>
+          {targetOptions.length > 0 ? (
+            <div className="mastery-list">
+              {targetOptions.map((option) => (
+                <div key={option.id} className="mastery-entry">
+                  <div className="mastery-order">Stage {option.order}</div>
+                  <div className="mastery-details">
+                    <h3>{option.name}</h3>
+                    <p>Training Pattern: {option.reps}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="no-mastery">
+              <p>No mastery path available for this technique.</p>
+            </div>
+          )}
+        </div>
       </ModalWindow>
-
     </div>
   );
 };
