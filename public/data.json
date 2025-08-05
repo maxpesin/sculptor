@@ -197,6 +197,36 @@
       "orderFrequency": 3,
       "countFrequency": 1,
       "id": 1741530632571
+    },
+    {
+      "name": "gladiator push-up",
+      "mainMuscle": "chest",
+      "targetMuscle": "compound",
+      "equipment": "dumbbells",
+      "reps": "8-12",
+      "order": 1,
+      "orderFrequency": 3,
+      "countFrequency": 1,
+      "id": 1754362039717
+    },
+    {
+      "name": "incomplete technique",
+      "mainMuscle": "chest",
+      "order": 1,
+      "orderFrequency": 3,
+      "countFrequency": 1,
+      "id": 1754362039617
+    },
+    {
+      "name": "gladiator push-up",
+      "mainMuscle": "chest",
+      "targetMuscle": "compound",
+      "equipment": "dumbbells",
+      "reps": "8-12",
+      "order": 2,
+      "orderFrequency": 3,
+      "countFrequency": 2,
+      "id": 1754362040090
     }
   ],
   "history": [
@@ -334,6 +364,15 @@
       "set2": 20,
       "set3": 40,
       "set4": 5
+    },
+    {
+      "date": "2025-08-05 02:47:19",
+      "exercise": "gladiator push-up",
+      "exerciseId": 1754362040090,
+      "set1": 10,
+      "set2": 12,
+      "set3": 15,
+      "set4": 20
     }
   ]
 }
