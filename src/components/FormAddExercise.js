@@ -41,7 +41,7 @@ const FormAddExercise = ({ updateData, data, muscles = [] }) => {
 
     console.log("⚔️ Forging new combat technique:", exerciseToSend);
 
-    fetch("http://localhost:5000/add-exercise", {
+    fetch("/api/add-exercise", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(exerciseToSend),
