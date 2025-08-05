@@ -29,7 +29,13 @@ const Dropdown = ({
   const optionLabelAccessor = getOptionLabel || defaultGetOptionLabel;
 
   return (
-    <select name={name} value={value} onChange={handleChange} disabled={disabled}>
+    <select 
+      name={name} 
+      value={value} 
+      onChange={handleChange} 
+      disabled={disabled}
+      className="roman-dropdown"
+    >
       <option value="">{placeholder}</option>
       {options.length > 0 ? (
         options.map((option, index) => {
@@ -43,7 +49,7 @@ const Dropdown = ({
           );
         })
       ) : (
-        <option disabled>Loading options...</option>
+        <option disabled>Loading gladiator options...</option>
       )}
     </select>
   );
